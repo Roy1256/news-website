@@ -74,3 +74,30 @@ aside article {
   padding: 10px 0;
   border-bottom: 1px solid #e0e0e0;
 }
+
+/* ==== FORCE CLICK FIX (GLOBAL) ==== */
+* {
+  pointer-events: auto !important;
+}
+
+a, a * {
+  pointer-events: auto !important;
+  cursor: pointer !important;
+}
+
+/* REMOVE ANY OVERLAY */
+header, nav, main, section, article, aside {
+  position: relative;
+  z-index: 1;
+}
+
+/* KILL INVISIBLE BLOCKERS */
+body::before,
+body::after,
+header::before,
+header::after,
+main::before,
+main::after {
+  content: none !important;
+  pointer-events: none !important;
+}
