@@ -54,3 +54,23 @@ footer {
     padding: 20px;
     color: #666;
 }
+
+/* NEWS LINKS VISIBILITY FIX */
+aside article a {
+  display: block;
+  color: #000;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+aside article a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Make article feel clickable */
+aside article {
+  padding: 10px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
