@@ -1,103 +1,27 @@
-body {
-    margin: 0;
-    font-family: Georgia, "Times New Roman", serif;
-    background: #ffffff;
-    color: #111;
+/* ===== HARD RESET FOR CLICKS ===== */
+html, body {
+  position: static !important;
+  pointer-events: auto !important;
 }
 
-.topbar {
-    border-bottom: 1px solid #ddd;
-    padding: 15px 40px;
-}
-
-.topbar h1 {
-    margin: 0;
-    font-size: 26px;
-}
-
-.topbar nav {
-    margin-top: 10px;
-}
-
-.topbar nav a {
-    margin-right: 20px;
-    text-decoration: none;
-    color: #111;
-    font-weight: bold;
-}
-
-.layout {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 40px;
-    padding: 40px;
-    max-width: 1200px;
-    margin: auto;
-}
-
-.main-story h2 {
-    font-size: 28px;
-}
-
-.meta {
-    color: #666;
-    font-size: 13px;
-}
-
-.side-news article {
-    margin-bottom: 25px;
-}
-
-footer {
-    border-top: 1px solid #ddd;
-    text-align: center;
-    padding: 20px;
-    color: #666;
-}
-
-/* NEWS LINKS VISIBILITY FIX */
-aside article a {
-  display: block;
-  color: #000;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-aside article a:hover {
-  color: #0056b3;
-  text-decoration: underline;
-  cursor: pointer;
-}
-
-/* Make article feel clickable */
-aside article {
-  padding: 10px 0;
-  border-bottom: 1px solid #e0e0e0;
-}
-
-/* ==== FORCE CLICK FIX (GLOBAL) ==== */
 * {
   pointer-events: auto !important;
 }
 
-a, a * {
-  pointer-events: auto !important;
-  cursor: pointer !important;
+/* DISABLE ALL PSEUDO OVERLAYS */
+*::before,
+*::after {
+  display: none !important;
 }
-
-/* REMOVE ANY OVERLAY */
-header, nav, main, section, article, aside {
+a {
   position: relative;
-  z-index: 1;
+  z-index: 9999;
+  cursor: pointer;
 }
 
-/* KILL INVISIBLE BLOCKERS */
-body::before,
-body::after,
-header::before,
-header::after,
-main::before,
-main::after {
-  content: none !important;
-  pointer-events: none !important;
+nav a,
+aside a,
+article a {
+  display: inline-block;
+  pointer-events: auto;
 }
