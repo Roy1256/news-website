@@ -7,105 +7,85 @@
 
 /* ===== BODY ===== */
 body {
-  font-family: Georgia, "Times New Roman", serif;
-  color: #111;
-  background: #fff;
-  line-height: 1.6;
+  margin: 0;
+  font-family: Arial, sans-serif;
 }
 
-/* ===== LINKS (CRITICAL FOR CLICKING) ===== */
-a {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* ===== HEADER ===== */
-header.topbar {
-  padding: 20px 40px;
-  border-bottom: 1px solid #e0e0e0;
-}
-
-header.topbar h1 {
-  font-size: 32px;
-  margin-bottom: 10px;
-}
-
-/* ===== NAV ===== */
-nav.nav {
+.topbar {
   display: flex;
-  gap: 18px;
+  align-items: center;
+  justify-content: space-between;
+  background: black;
+  padding: 10px 20px;
 }
 
-nav.nav a {
-  font-size: 16px;
-  font-weight: bold;
+.topbar a {
+  color: white;
+  margin-right: 15px;
+  text-decoration: none;
 }
 
-/* ===== LAYOUT ===== */
-main.layout {
-  display: grid;
-  grid-template-columns: 2.5fr 1fr;
+.logo img {
+  height: 50px;
+}
+
+.search input {
+  padding: 6px;
+  border-radius: 20px;
+  border: none;
+}
+
+.container {
+  display: flex;
+  padding: 30px;
   gap: 40px;
-  padding: 40px;
 }
 
-/* ===== MAIN STORY ===== */
-.main-story h2 {
-  font-size: 32px;
-  margin-bottom: 12px;
+.articles {
+  flex: 2;
 }
 
-.main-story p.meta {
-  color: #555;
-  font-size: 14px;
-  margin-bottom: 14px;
+.news-card {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
 }
 
-.main-story p {
-  font-size: 18px;
+.news-card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 10px;
+  object-fit: cover;
 }
 
-/* ===== SIDE NEWS ===== */
-.side-news article {
-  margin-bottom: 24px;
+.news-card h3 {
+  margin: 0;
 }
 
-.side-news h4 {
-  font-size: 18px;
-  margin-bottom: 6px;
+.news-card a {
+  text-decoration: none;
+  color: black;
 }
 
-.side-news p.meta {
-  font-size: 13px;
-  color: #666;
+.videos {
+  flex: 1;
 }
 
-/* ===== FOOTER ===== */
+.video-card {
+  margin-bottom: 25px;
+}
+
+.video-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.video-card h4 {
+  margin: 8px 0 0;
+}
+
 footer {
-  border-top: 1px solid #e0e0e0;
   text-align: center;
   padding: 20px;
-  margin-top: 40px;
-  font-size: 14px;
-  color: #555;
-}
-
-/* ===== MOBILE ===== */
-@media (max-width: 900px) {
-  main.layout {
-    grid-template-columns: 1fr;
-  }
-
-  header.topbar {
-    padding: 20px;
-  }
-
-  main.layout {
-    padding: 20px;
-  }
+  border-top: 1px solid #ccc;
 }
