@@ -50,10 +50,14 @@ body {
   background-color: #ff3d00;
 }   
 /* LOGO CENTER */
-.logo img {
-    height: 60px;
-    width: auto;
+/* LOGO FIX */
+.logo img,
+img.logo {
+  height: 60px;        /* perfect for news header */
+  width: auto;
+  object-fit: contain;
 }
+
 
 /* SEARCH */
 .search input {
@@ -189,5 +193,6 @@ footer {
   color: #555;
   margin-bottom: 30px;
 }
+
 
 
