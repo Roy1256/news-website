@@ -250,3 +250,14 @@ section.articles h2 {
   border-bottom: 2px solid #f3f3f3;
   padding-bottom: 8px;
 }
+
+.section-title {
+    margin-top: 60px;
+    margin-bottom: 20px;
+    font-size: 26px;
+    border-bottom: 2px solid #e5e5e5;
+    padding-bottom: 8px;
+}
+:target {
+    scroll-margin-top: 90px;
+}
