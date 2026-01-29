@@ -237,3 +237,16 @@ footer {
         font-size: 17px;
     }
 }
+
+/* prevent header from covering the section heading when using hash links */
+:target {
+  scroll-margin-top: 90px; /* adjust to match header height */
+}
+
+/* section headings style */
+section.articles h2 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #f3f3f3;
+  padding-bottom: 8px;
+}
